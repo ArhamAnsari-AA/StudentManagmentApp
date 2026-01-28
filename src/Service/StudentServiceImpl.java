@@ -9,7 +9,7 @@ public class StudentServiceImpl implements StudentService {
 
     private Student[] students = new Student[100];
     private int count = 0;
-
+    //override addMethod
     @Override
     public void addStudent(Student student)
             throws ArrayFullException, InvalidInputException {
@@ -29,7 +29,7 @@ public class StudentServiceImpl implements StudentService {
         students[count++] = student;
         System.out.println("Student added successfully");
     }
-
+    //Override view method from StudentService interface
     @Override
     public void viewAllStudent() throws StudentNotFoundException {
         if (count == 0) {
@@ -40,7 +40,7 @@ public class StudentServiceImpl implements StudentService {
             students[i].display();
         }
     }
-
+    //Override search method from StudentService interface
     @Override
     public Student searchStudent(String name) throws StudentNotFoundException {
         for (int i = 0; i < count; i++) {
@@ -52,7 +52,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
 
-
+    //Override update method from StudentService interface
     @Override
     public void updateStudent(String name, Student updatedStudent)
             throws StudentNotFoundException {
@@ -66,7 +66,7 @@ public class StudentServiceImpl implements StudentService {
         System.out.println("Student updated successfully (name unchanged)");
     }
 
-
+    //Override delete method from StudentService interface
     @Override
     public void deleteStudent(int id) throws StudentNotFoundException {
 

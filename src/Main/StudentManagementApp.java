@@ -17,7 +17,7 @@ public class StudentManagementApp {
         Scanner sc = new Scanner(System.in);
 
         StudentService service = new StudentServiceImpl();
-
+// from these user select the option i used switch case which is inside while loop
         while (true){
 
             System.out.println("\n Student Management System ");
@@ -104,7 +104,7 @@ public class StudentManagementApp {
                     default:
                         System.out.println("Invalid choice!");
                 }
-
+            // InputMisMatch catch here
             } catch (InputMismatchException e) {
                 System.out.println( " Invalid input type! Please enter correct data.");
                 sc.nextLine(); // buffer clear
